@@ -1,22 +1,39 @@
 :root {
-    --bg: #f7f7f9;
-    --accent: #0b76ff
+    --bg: #2C2C2C;
+    --accent: #0b76ff;
 }
 
 body {
     font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
     margin: 0;
     background: var(--bg);
-    color: #111
+    color: #ffffff;
 }
-
 .hero {
     padding: 4rem 1rem;
     text-align: center;
-    background: white;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, .04)
+    background: url('images/background.jpg') center/cover no-repeat;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    position: relative;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
 }
 
+.hero h1,
+.hero p,
+.hero .btn {
+    position: relative;
+    z-index: 1;
+}
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -40,7 +57,102 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, .04)
 }
+.navbar {
+    background: var(--bg);
+    color: #fff;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.navbar .logo {
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.navbar .nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Hamburger menu (mobile) */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #fff;
+    border-radius: 1px;
+}
+
+.nav-toggle .hamburger::before {
+    transform: translateY(-6px);
+}
+
+.nav-toggle .hamburger::after {
+    transform: translateY(4px);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: var(--bg);
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 1rem;
+        border-radius: 0 0 0 8px;
+        box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+}
 footer {
     text-align: center;
     padding: 2rem 1rem;
