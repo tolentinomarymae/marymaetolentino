@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary Mae Tolentino - Portfolio</title>
+    <link rel="icon" type="image/png" href="images/logo1.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body> 
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo1.png" alt="Logo">
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <h1>Mary Mae Tolentino</h1>
+            <h2>Junior Software Engineer</h2>
+            <p>Turning coffee into code and complexity into clarity through scalable web solutions.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content fade-in">
+            <div class="about-text">
+                <h3>Building the Future, One Line at a Time</h3>
+                <p>Hi! I'm <span>Mary Mae</span>, a junior software developer passionate about building modern, scalable web
+                applications. I enjoy learning new technologies and applying best practices to create clean, reliable solutions.</p>
+            <p>When I'm not coding, you'll find me exploring open-source projects, learning from the developer community, keeping up
+                with tech trends, or honing my graphic design skills over a cup of coffee.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <span class="stat-number">1+</span>
+                    <span class="stat-label">Years Coding</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Skills Gained</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Cups of Coffee</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-category fade-in">
+                <h3>Frontend Development</h3>
+                <ul class="skill-list">
+                    <li>React & Next.js</li>
+                    <li>Vue.js & Nuxt</li>
+                    <li>TypeScript</li>
+                    <li>Tailwind CSS</li>
+                    <li>HTML5 & CSS3</li>
+                </ul>
+            </div>
+            <div class="skill-category fade-in">
+                <h3>Backend Development</h3>
+                <ul class="skill-list">
+                    <li>Node.js & Express</li>
+                    <li>Python & Django</li>
+                    <li>Go</li>
+                    <li>RESTful APIs</li>
+                    <li>GraphQL</li>
+                </ul>
+            </div>
+            <div class="skill-category fade-in">
+                <h3>Database & Cloud</h3>
+                <ul class="skill-list">
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                    <li>Redis</li>
+                    <li>AWS & Vercel</li>
+                    <li>Docker & Kubernetes</li>
+                </ul>
+            </div>
+            <div class="skill-category fade-in">
+                <h3>Tools & Workflow</h3>
+                <ul class="skill-list">
+                    <li>Git & GitHub</li>
+                    <li>CI/CD Pipelines</li>
+                    <li>Jest & Testing</li>
+                    <li>Figma & Design</li>
+                    <li>Agile Methodologies</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-image">🛒</div>
+                <div class="project-content">
+                    <h3 class="project-title">E-Commerce Platform</h3>
+                    <p class="project-description">A full-stack e-commerce solution with real-time inventory management,
+                        payment processing via Stripe, and an analytics dashboard for merchants.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Stripe</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Vercel</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image">🤖</div>
+                <div class="project-content">
+                    <h3 class="project-title">AI Chatbot Platform</h3>
+                    <p class="project-description">Intelligent customer service chatbot powered by GPT-4, handling 10k+
+                        conversations daily with 95% satisfaction rate and multi-language support.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenAI</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Redis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image">💪</div>
+                <div class="project-content">
+                    <h3 class="project-title">Fitness Tracking App</h3>
+                    <p class="project-description">Cross-platform fitness tracking app with social features, workout
+                        plans, and progress analytics. Achieved 50k+ downloads and 4.8★ rating.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">GraphQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image">⚙️</div>
+                <div class="project-content">
+                    <h3 class="project-title">DevOps Automation Toolkit</h3>
+                    <p class="project-description">Automated CI/CD pipeline reducing deployment time by 70% and
+                        improving team productivity across multiple projects with zero-downtime deployments.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Jenkins</span>
+                        <span class="tech-tag">AWS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image">📊</div>
+                <div class="project-content">
+                    <h3 class="project-title">Analytics Dashboard</h3>
+                    <p class="project-description">Real-time data visualization platform processing millions of events
+                        per day with beautiful interactive charts and customizable widgets.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">ClickHouse</span>
+                        <span class="tech-tag">WebSockets</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image">📦</div>
+                <div class="project-content">
+                    <h3 class="project-title">Open Source Library</h3>
+                    <p class="project-description">Popular npm package for state management with 2k+ GitHub stars,
+                        comprehensive documentation, and used by major companies worldwide.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Jest</span>
+                        <span class="tech-tag">Rollup</span>
+                        <span class="tech-tag">NPM</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container fade-in">
+            <p class="contact-text">I'm always interested in hearing about new projects and opportunities. Whether you
+                have a question or just want to say hi, feel free to reach out!</p>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://github.com" class="social-link" target="_blank" title="GitHub">
+                    <span>👨‍💻</span>
+                </a>
+                <a href="https://linkedin.com" class="social-link" target="_blank" title="LinkedIn">
+                    <span>💼</span>
+                </a>
+                <a href="https://twitter.com" class="social-link" target="_blank" title="Twitter">
+                    <span>🐦</span>
+                </a>
+                <a href="mailto:hello@johndeveloper.com" class="social-link" title="Email">
+                    <span>📧</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 John Developer. Built with passion and lots of coffee.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
