@@ -142,7 +142,7 @@ nav {
 }
 
 .hero h1 {
-    font-size: 5rem; 
+    font-size: 6rem; 
     background: linear-gradient(135deg, #f92672, #66d9ef);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
