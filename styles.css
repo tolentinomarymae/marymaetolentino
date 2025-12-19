@@ -657,6 +657,10 @@ footer {
         width: 100%;
         padding: 2rem;
         transition: right 0.3s;
+        display: flex;
+        align-items: center;       
+        justify-content: center;  
+        text-align: center;
     }
 
     .nav-links.active {
