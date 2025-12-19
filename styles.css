@@ -370,7 +370,7 @@ section {
 
 .project-image {
     width: 100%;
-    height: 200px;
+    height: 250px;
     background: linear-gradient(135deg, #272822, #3e3e42);
     display: flex;
     align-items: center;
@@ -378,6 +378,13 @@ section {
     font-size: 3rem;
     position: relative;
     overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
 }
 
 .project-image::before {
@@ -389,7 +396,6 @@ section {
     height: 100%;
     background: linear-gradient(135deg, rgba(249, 38, 114, 0.1), rgba(102, 217, 239, 0.1));
 }
-
 .project-content {
     padding: 2rem;
 }
@@ -519,6 +525,101 @@ section {
     color: #f92672;
     box-shadow: 0 10px 25px rgba(249, 38, 114, 0.3);
 }
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #272822, #3e3e42);
+    margin: 15% auto;
+    padding: 40px;
+    border: 2px solid #f92672;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    animation: slideDown 0.3s ease;
+    box-shadow: 0 10px 40px rgba(249, 38, 114, 0.3);
+}
+
+.close-modal {
+    color: #f8f8f2;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #f92672;
+}
+
+.modal-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: #a6e22e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #272822;
+    font-weight: bold;
+}
+
+.modal-icon.error {
+    background: #f92672;
+    color: #f8f8f2;
+}
+
+.modal-content h3 {
+    color: #f8f8f2;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: #f8f8f2;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 /* Footer */
 footer {
@@ -562,31 +663,119 @@ footer {
         right: 0;
     }
 
+    /* Hero Section - Smaller Fonts */
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .hero h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .cta-buttons {
         flex-direction: column;
     }
 
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    /* About Section */
     .about-content {
         grid-template-columns: 1fr;
     }
 
+    .about-text h3 {
+        font-size: 1rem;
+    }
+
+    .about-text p {
+        font-size: 0.75rem;
+    }
+
+    .stat-number {
+        font-size: 1.2rem;
+    }
+
+    .stat-label {
+        font-size: 0.68rem;
+    }
+
+    /* Skills Section */
+    .skill-category h3 {
+        font-size: .9rem;
+    }
+
+    .skill-list li {
+        font-size: 0.7rem;
+    }
+
+    /* Projects Section */
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-title {
+        font-size: 1rem;
+    }
+
+    .project-description {
+        font-size: 0.7rem;
+    }
+
+    .tech-tag {
+        font-size: 0.6rem;
+        padding: 0.3rem 0.6rem;
+    }
+    .project-link {
+        font-size: 0.6rem;
+    }
+
+    /* Contact Section */
+    .contact-text {
+        font-size: .8rem;
+    }
+    .form-group label {
+        font-size: 0.7rem;
+    }
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.7rem;
+        padding: 0.8rem;
+    }
+
+    /* Modal */
+    .modal-content {
+        padding: 30px;
+        margin: 25% auto;
+    }
+
+    .modal-content h3 {
+        font-size: 19px;
+    }
+
+    .modal-content p {
+        font-size: 14px;
+    }
+
+    .modal-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 36px;
     }
 
     .about-stats {
         grid-template-columns: 1fr;
     }
+    
 }

@@ -66,11 +66,62 @@ for (let i = 0; i < particleCount; i++) {
 }
 
 // Form Submission
+// Modal Functions
+function showModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'block';
+    
+    // Close when clicking X
+    const closeBtn = modal.querySelector('.close-modal');
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+    
+    // Close when clicking outside
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    }
+    
+    // Auto close after 3 seconds
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 3000);
+}
+
+// Updated Form Submission with Modal
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    alert('Thanks for your message! I\'ll get back to you soon.');
-    contactForm.reset();
+    
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    
+    const formData = new FormData(contactForm);
+    
+    try {
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            showModal('successModal');
+            contactForm.reset();
+        } else {
+            showModal('errorModal');
+        }
+    } catch (error) {
+        showModal('errorModal');
+    }
+    
+    submitBtn.textContent = 'Send Message';
+    submitBtn.disabled = false;
 });
 
 // Active Nav Link on Scroll
@@ -93,3 +144,4 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
