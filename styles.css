@@ -142,7 +142,7 @@ nav {
 }
 
 .hero h1 {
-    font-size: 6rem; 
+    font-size: 5rem; 
     background: linear-gradient(135deg, #f92672, #66d9ef);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -665,7 +665,7 @@ footer {
 
     /* Hero Section - Smaller Fonts */
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
 
     .hero h2 {
