@@ -345,12 +345,31 @@ section {
     color: #a6e22e;
     font-weight: bold;
 }
-
+ 
 /* Projects Section */
+.projects-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2rem 0;
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: #f92672 #272822;
+}
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
     gap: 2.5rem;
+    width: max-content;
+    padding-bottom: 1rem;
+
+    animation: autoScroll 40s linear infinite;
+    scroll-behavior: smooth;
+}
+.projects-container:hover .projects-grid,
+.projects-container:active .projects-grid {
+    animation-play-state: paused;
+}
+.projects-grid:hover {
+    animation-play-state: paused;
 }
 
 .project-card {
@@ -360,12 +379,45 @@ section {
     border: 2px solid transparent;
     transition: all 0.4s;
     position: relative;
+    width: 500px;
+    flex-shrink: 0;
 }
 
 .project-card:hover {
     border-color: #f92672;
-    transform: translateY(-10px);
+    transform: scale(1.15);
+    z-index: 10;
     box-shadow: 0 15px 40px rgba(249, 38, 114, 0.3);
+}
+
+.project-card.hidden {
+    display: none;
+}
+@keyframes autoScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+.projects-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.projects-container::-webkit-scrollbar-track {
+    background: #272822;
+    border-radius: 10px;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #f92672, #66d9ef);
+    border-radius: 10px;
+}
+
+.projects-container::-webkit-scrollbar-thumb:hover {
+    background: #f92672;
 }
 
 .project-image {
